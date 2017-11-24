@@ -1,0 +1,4 @@
+Metodissa **Start, Stop, Continue, More of, Less of Wheel** piirretään ympyrään nimen mukaiset viisi sektoria ja kirjataan siihen edelliseen iteraatioon liittyen minkä tehtävien tekeminen pitäisi aloittaa, mitkä käytännöt tai tehtävät ovat niin haitallisia, että ne pitäisi lopettaa, mikä on toimivaa jota kannattaa jatkaa, mitä pitäisi tehdä enemmän ja mitä vähemmän. Kommentit kirjataan paperille asianmukaiseen kohtaan lyhyine perusteluineen.
+
+Metodissa **Glad, Sad, Mad** osanottajat kirjoittavat huomionsa arkistokorteille, jotka sitten kiinnitetään taululle aiheuttamansa tunnetilan mukaiseen sarakkeeseen. Samaan asiaan liittyvät kortit ryhmitellään, jonka jälkeen äänestetään siitä, mistä aiheista halutaan keskustella. Sen jälkeen keskustellaan toivotuista aiheista äänestystuloksen mukaisessa järjestyksessä kunnes aiheet loppuvat tai aikaraja tulee vastaan.
+
