@@ -10,6 +10,7 @@ public class KauppaTest {
     Pankki pankki;
     Viitegeneraattori viite;
     Kauppa k;
+    Varasto varasto;
 
     @Before
     public void setUp() {
@@ -18,14 +19,14 @@ public class KauppaTest {
         viite = mock(Viitegeneraattori.class);
         when(viite.uusi()).thenReturn(42);
         
-        Varasto varasto = mock(Varasto.class);
+        varasto = mock(Varasto.class);
         when(varasto.saldo(1)).thenReturn(10);
         when(varasto.haeTuote(1)).thenReturn(new Tuote(1, "maito", 5));
         when(varasto.saldo(2)).thenReturn(10);
-        when(varasto.haeTuote(2)).thenReturn(new Tuote(2, "limppu", 6));
-        
+        when(varasto.haeTuote(2)).thenReturn(new Tuote(2, "limppu", 6));        
         when(varasto.saldo(3)).thenReturn(0);
         when(varasto.haeTuote(3)).thenReturn(new Tuote(3, "limppu", 7));
+        
 
         k = new Kauppa(varasto, pankki, viite);
     }
@@ -96,6 +97,18 @@ public class KauppaTest {
         k.tilimaksu("pekka", "12345");
 
         verify(viite, times(2)).uusi();
+    }
+    
+    @Test
+    public void koristaPoistaminenPalauttaaVarastoon() {
+        
+        k.aloitaAsiointi();
+        k.lisaaKoriin(1);
+        k.poistaKorista(1);        
+        
+        Tuote t = varasto.haeTuote(1);  
+        
+        verify(varasto, times(1)).palautaVarastoon(t);
     }
     
     
